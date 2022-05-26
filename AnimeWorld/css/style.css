@@ -1,0 +1,92 @@
+body, html{
+    height: 100%;
+    margin: 0;                        /* căn lề văn bản */
+    font-size: 16px;                  /* kích thước phông chữ */
+    font-family: "lato", sans-serif;  /* phông chữ */
+    font-weight: 400;                 /* độ rộng phông chữ */
+    line-height: 1.8 cm;              /* chiều cao dòng */
+    color:#666; 
+}
+
+.pimg1, .pimg2, .pimg3, .pimg4{
+    position: relative;
+    opacity: 0.70;                     /*độ mờ của ảnh */
+    background-position: center;       /* căn chỉnh ảnh ra giữa */
+    background-size: cover;
+    background-repeat: no-repeat;      /* các bức ảnh sẽ không được lặp lại theo chiều ngang hay dọc */
+
+    /* 
+        fixed : parallax
+        scroll: normal
+    */
+
+    background-attachment: fixed;      /* khi cuộn màn hình văn bản sẽ di chuyển theo nhưng ảnh sẽ được cố định */
+}
+
+.pimg1{
+    background-image:url('../img/3.jpg');
+    min-height: 100%;                               /* chiều cao tối thiểu */
+
+}
+
+.pimg2{
+    background-image:url('../img/day1.jpg');
+    min-height: 400px;                               /* chiều cao tối thiểu */
+    
+}
+
+.pimg3{
+    background-image:url('../img/night1.jpg');
+    min-height: 400px;                               /* chiều cao tối thiểu */
+    
+}
+
+.pimg4{
+    background-image:url('../img/1.jpg');
+    min-height: 800px;                               /* chiều cao tối thiểu */
+    
+}
+
+.section{
+    text-align: center;                       /* căn chỉnh văn bản ra giữa */
+    padding: 50px 80px;                       /*  căn chỉnh lề của văn bản trái phải */
+}
+
+.section-light{
+    background-color: #f4f4f4;             /* màu phông nền văn bản */ 
+    color: #666;                           /* màu văn bản */
+}
+
+.section-dark{
+    background-color: #282e34;              
+    color: #ddd; 
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color:#000;
+    font-size: 27px;
+    letter-spacing: 8px;                       /* khoảng cách giữa các chữ cái */
+    text-transform: uppercase;                 /* chuyển đổi văn bản thành chữ hoa */
+}
+
+.ptext .border{
+    background-color: grey;
+    color:#fff;
+    padding: 20px;
+
+}
+
+.ptext .border .trans{
+    background-color: transparent;             /* phông nền đường viền là trong suốt */
+}
+
+
+@media(max-width:568px){                       /* căn chỉnh độ rộng phù hợp khi mở trang web trên các thiết bị khác */
+    .img1 .img2 .img3 .img4{
+    background-attachment: scroll;            
+    }
+}
