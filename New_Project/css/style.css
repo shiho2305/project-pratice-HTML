@@ -1,0 +1,177 @@
+/* Core Styles */
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color:#fff;
+    font-size: 1.1em;               /* kích thước phông chữ */
+    line-height: 1.5;                /* chiều cao giữa các dòng */
+    text-align: center;              /* căn chỉnh văn bản */ 
+}
+
+img{
+    display:block;                /* hiển thị ảnh theo khối */
+    width:100%;                   /* chiều rộng của ảnh */
+    height:auto;                  /* chiều cao của ảnh tự động */ 
+}
+
+h1, h2, h3{
+    margin: 0;                     /* không đặt lề */
+    padding: 1em 0;               /* thêm phần đệm vào trên cùng và dưới cùng bên phỉa và trái */                 
+}
+
+p{
+    margin: 0;
+    padding: 1em 0;
+}
+
+.btn{
+    display: inline-block;           /* hiển thị văn bản dưới dạng một khối nội tuyến */
+    background: rgb(139, 190, 209);
+    color:#fff;
+    text-decoration: none;            /* loại bỏ phần gạch dưới văn bản */
+    padding: 1em 2em;            
+    border: 1px solid #666;        /* tạo khối cho văn bản */
+    margin: 0.5em 0;
+}
+
+.btn:hover{
+    background: #eaeaea;
+    color:#333;
+}
+
+/* Header Showcase */
+
+#Showcase{
+    min-height: 450px;
+    color:#fff;
+    text-align: center;
+}
+
+#showcase .bg-image {
+    position: absolute;
+    background: #333 
+    url("../img/anime.png");
+    background-position: center;                /* căn chỉnh ảnh ra trung tâm */
+    background-repeat: no-repeat;               /* không có ảnh lặp lại */
+    background-size: cover;                     /* kích thước ảnh bao phủ màn hình */
+    width: 100%; 
+    height: 450px;
+    z-index: -1;                                /* đưa hình ảnh lên bên trên */
+    opacity: 0.5;                               /* làm mờ hình ảnh */
+}
+
+#showcase h1{
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+#showcase .content-wrap,
+#section-a .content-wrap{
+    padding: 0 1.5em;
+}
+
+/* Section A */
+
+#section-a{
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+}
+
+/* Section B */
+
+#section-b{
+    padding: 2em 1em 1em;
+
+}
+
+#section-b ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#section-b li{
+    margin-bottom: 1em;
+    background: #fff;
+    color:#333;
+}
+
+.card-content {
+    padding: 1.5em;  
+}
+
+/* Section C */
+
+#section-c{
+    background: #fff;
+    color:#333;
+    padding: 2em;
+}
+
+/* Section D / Boxes */
+
+#section-d .box{
+    padding: 2em;
+    color:#fff;
+}
+
+#section-d .box:first-child{
+    background: #2690d4;
+}
+
+/* Footer */
+
+#main-footer{
+    padding: 2em;
+    background: #000;
+    color:#fff;
+    text-align: center;
+}
+
+#main-footer a{
+    color:#2690d4;
+    text-decoration: none; 
+}
+
+/* Media Queries */
+
+@media(min-width: 700px){
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr repeat(2 , minmax(auto, 25em)) 1fr;                    /* chia các văn bản và hình ảnh thành các cột thành phần */
+    }
+
+    #section-a .content-text {
+        columns: 2;
+        column-gap: 2em;                                  /* khoảng cách cột */
+    }
+
+    #section-a .content-text p{
+        padding-top: 0;
+
+    }
+
+    .content-wrap, 
+    #section-b ul{
+        grid-column: 2/4;
+    }
+
+    .box, 
+    #main-footer div{
+        grid-column: span 2;
+    }
+
+    #section-b ul{
+        display:flex;
+        justify-content: space-around;
+    }
+
+    #section-b li{
+        width: 31%;
+    }
+
+}
+
