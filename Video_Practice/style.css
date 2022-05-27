@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;                   /* căn chỉnh lề của web */
+}
+
+body{
+    margin: 0;                          /* căn chỉnh lề */
+    font-family: 'Segoe UI', tahoma, Geneva, Verdana, sans-serif;               /* phông chữ */
+    font-size: 1rem;                    /* kích thước phông chữ */
+    line-height: 1.5;                   /* chiều cao dòng */
+    color:#333;            
+    overflow-x: hidden;                 /* đảm bảo không có thanh cuộn ngang trên trang web */
+}
+
+.v-header{
+    height: 100vh;                     /* thiết lập chiều cao khung hình */
+    display:flex;                       
+    align-items: center;               /* căn chỉnh khung hình ở giữa */
+    color:#fff;
+}
+
+.container{
+    max-width: 960px;                 /* căn chỉnh chiều rộng tối đa */
+    padding-left: 1rem;               /* phần đệm bên trái được căn chỉnh là 1 rem */
+    padding-right: 1rem;              /* căn chỉnh phần đệm bên phải */
+    margin: auto;                     /* căn chỉnh lề tự động */
+    text-align: center;               /* căn chỉnh phần văn bản ở giữa */
+}
+
+.fullscreen-video-wrap{
+    position:absolute;                /* vị trí đặt video là tuyệt đối */
+    top: 0;                     
+    left: 0;
+    width:100%;
+    height:100vh;
+    overflow:hidden;                 /* đảm bảo không có thanh cuộn nào */
+}
+
+.fullscreen-video-wrap video{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.header-overlay{                      /* lớp phủ tiêu đề */
+    height: 100vh;
+    width: 100vw;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    background: #225470;
+    z-index: 1;                       /* đảm bảo video luôn ở đầu của trang web */
+    opacity: 0.75;
+}
+
+.header-content{                      /* tiêu đề trên video */
+    z-index:2;
+}
+
+.header-content h1{
+    font-size:50px;
+    margin-bottom: 0;                  /* đặt lề dưới cho tiêu đề */
+}
+
+.header-content p{
+    font-size: 1.6rem;                 /* căn chỉnh kích thước văn bản */
+    display: block;                    /* hiển thị văn bản theo khối */
+    padding-bottom: 2rem;             /* căn chỉnh phần đệm dưới của văn bản */
+}
+
+.btn{
+    background:#34b3a0; 
+    color:#fff;
+    font-size:2rem;
+    padding: 1rem 2rem;
+    text-decoration: none;            /* loại bỏ phần gạch dưới của văn bản và chuyển đổi thành nút của văn bản */
+}
+
+.section{
+    padding: 20px 0;
+
+}
+
+.section-b{
+    background:#333;
+    color:#fff;
+}
+
+a.btn:hover{                                /* thay đổi màu của văn bản trong ô khi di chuyển chuột vào ô đó */
+    color:rgb(246, 255, 127);
+}
+
+@media(max-width:960px){             /* căn chỉnh độ rộng trang web trên các thiết bị khác */
+    .container{
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+}
